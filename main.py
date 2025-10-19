@@ -4,6 +4,7 @@ from pydantic import BaseModel
 from openai import OpenAI
 import numpy as np
 from typing import List
+import os
 
 app = FastAPI()
 
