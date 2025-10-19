@@ -16,7 +16,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-client = OpenAI()  # Uses OPENAI_API_KEY from environment
+client = OpenAI(
+    api_key=os.getenv("OPENAI_API_KEY"),
+    base_url="https://aipipe.org/openrouter/v1"
+)
 
 class SimilarityRequest(BaseModel):
     docs: List[str]
