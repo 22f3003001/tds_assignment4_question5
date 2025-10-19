@@ -18,7 +18,7 @@ app.add_middleware(
 
 # Use AI Pipe's OpenAI endpoint for embeddings
 client = OpenAI(
-    api_key=os.getenv("AIPIPE_TOKEN"),
+    api_key=os.getenv("OPENAI_API_KEY"),
     base_url="https://aipipe.org/openai/v1"
 )
 
